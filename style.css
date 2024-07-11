@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gridContainer {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 300px repeat(3, 400px);
+    grid-template-rows:  repeat(2, 1fr) repeat(4, 2fr);
+}
+
+.sideMenu {
+    background-color: #E8E217;
+    grid-row: 1/7;
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 15% 85%;
+    padding: 25px;
+    grid-auto-flow: column;
+    padding-top: 45%;
+}
+
+.searchBar {
+    background-color: white;
+    grid-column: 2/5;
+    grid-row: 1/3;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.15); 
+}
+
+.projects {
+    background-color: #dadce061;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    grid-column: 2/4;
+    grid-row: 3/7;
+    padding: 30px;
+    padding-top: 60px;
+}
+
+.project, .annoucements, .trending {
+    display: grid;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 30px;
+    height: 140px;
+}
+
+.other {
+    background-color: #dadce061;
+    grid-row: 3/7;
+    display: grid;
+    padding: 30px;
+    gap: 60px;
+    padding-top: 60px;
+}
+
+.annTitle, .projTitle {
+    position: absolute;
+    top: 20%;
+}
+
+.trendTitle {
+    position: absolute;
+    bottom: 35%;
+}
+
+.menuItem {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.sideMenu > div {
+    display: grid;
+    gap: 35px;
+    grid-column: 2/3;
+}
+
+img {
+    width: 70%;
+    grid-column: 1/2;
+}
+
+h1 {
+    position: absolute;
+    top: 10px;
+    left: 75px;
+}
+
+.dashboardIcon {
+    position: absolute;
+    width: 46px;
+    top: 25px;
+    left: 20px;
+}
+
+.projects > div{
+    font-weight: bold;
+    font-size: large;
+}
+
+.projectDescription{
+    font-weight: initial;
+    font-size: 16px;
+}
+
+.annoucements, .trending {
+    height: 240px;
+}
+
+.project {
+    border-top: solid #3688FF 5px;
+}
+
+.annItem {
+    height: fit-content;
+    padding: 15px;
+}
+
+.annItem:nth-child(-n + 2) {
+    border-bottom: solid grey 1px;
+}
+
+.annItem {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.annDescription {
+    font-size: 12px;
+    font-weight: initial;
+}
